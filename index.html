@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="OHIO: Offline Hierarchical Reinforcement Learning via Inverse Optimization.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OHIO: Offline Hierarchical Reinforcement Learning via Inverse Optimization.</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">OHIO: Offline Hierarchical Reinforcement Learning via Inverse Optimization.</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=-0zHX8oAAAAJ&hl=en">Carolin Schmidt</a><sup>1</sup>,</span>
+            <span class="author-block">
+                <a href="https://danielegammelli.github.io">Daniele Gammelli</a><sup>2</sup>,</span>
+            <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=-tEiRFcAAAAJ&hl=en">James Harrison</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+                <a href="https://profiles.stanford.edu/marco-pavone">Marco Pavone</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+                <a href="https://fprodrigues.com">Filipe Rodrigues</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Technical University of Denmark,</span>
+            <span class="author-block"><sup>2</sup>Stanford University</span>
+            <span class="author-block"><sup>3</sup>Google DeepMind</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/carolinssc/OHIO"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://drive.google.com/drive/folders/1pP421W_dQ8PFChNyGQbym3uzSK6CDunR"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <!-- First Column -->
+        <div class="column is-one-third">
+          <div class="content">
+            <video poster="" id="open-loop" autoplay controls muted loop playsinline style="width:100%;">
+              <source src="./figures/Offline.mp4" type="video/mp4">
+            </video>
+            <figcaption style="text-align:center;">Standard Offline RL</figcaption>
+          </div>
+        </div>
+
+        <!-- Second Column -->
+        <div class="column is-one-third">
+          <div class="content">
+            <video poster="" id="closed-loop" autoplay controls muted loop playsinline style="width:100%;">
+              <source src="./figures/OHIO2.mp4" type="video/mp4">
+            </video>
+            <figcaption style="text-align:center;">OHIO</figcaption>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="subtitle has-text-centered">
+        OHIO enables effective offline learning of hierarchical policies across different lower policy settings
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+            Hierarchical policies enable strong performance in many sequential decision-making
+            problems, such as those with high-dimensional action spaces, those requiring longhorizon
+            planning, and settings with sparse rewards. However, learning hierarchical
+            policies from static offline datasets presents a significant challenge. Crucially, actions
+            taken by higher-level policies may not be directly observable within hierarchical controllers,
+            and the offline dataset might have been generated using a different policy
+            structure, hindering the use of standard offline learning algorithms. 
+            </p>
+            </p>
+            In this work, we propose <span class="dnerf">OHIO</span>: a framework for offline reinforcement learning (RL) of hierarchical policies.
+            Our framework leverages knowledge of the policy structure to solve the inverse problem,
+            recovering the unobservable high-level actions that likely generated the observed data under
+            our hierarchical policy. This approach constructs a dataset suitable for off-the-shelf
+            offline training. We demonstrate our framework on robotic and network optimization
+            problems and show that it substantially outperforms end-to-end RL methods and improves
+            robustness. We investigate a variety of instantiations of our framework, both in
+            direct deployment of policies trained offline and when online fine-tuning is performed.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+      <!--/ Results. -->
+      <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+          <h2 class="title is-3">Method</h2>
+          <div class="content has-text-centered">
+          <img src="figures/fig1_new.png"
+          height="400px" width="1000px"/>
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              We propose OHIO, a framework to learn hierarchical behavior policies from offline data. By
+              exploiting structural knowledge of the low-level policy, we solve an inverse problem (top center) to
+              transform low-level trajectory data (top left) into a dataset amenable to offline RL (top right), regardless
+              of the nature of the policy used for data collection. At inference time, the RL-trained policy provides inputs
+              to the low-level policy (bottom).
+            </p>
+      </div>
+      </div>    
+  </div>
+  </section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <!--/ Results. -->
+        <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+            <h2 class="title is-3">Results</h2>
+            
+            <div class="content has-text-justified">
+            <p>
+                To demonstrate broad applicability of our framework, OHIO, is evaluated across different domains:
+            </p>
+            <ol type="a">
+                <li><em>Robotics scenarios, where the low-level policy is a traditional, non-learned controller</em></li>
+                <li><em>Real-world network optimization problems, in which the low-level policy is optimization-based</em></li>
+            </ol>
+            </div>
+            </p>
+            <div class="content has-text-justified">
+              <p>
+                OHIO effectively utilizes datasets collected under varying or unknown low-level controller configurations 
+                ---a common challenge in practice that often hinders the efficient use of available data.
+              </p>
+            </div>
+
+            <div class="content has-text-centered">
+            <img src="figures/Results_robosuite2.png"
+            height="400px" width="800px"/>
+            </div>
+
+            <div class="content has-text-justified">
+            <p>
+              Our approach demonstrates strong performance across all problem settings we evaluate, substantially outperforming end-to-end RL and other hierarchical approaches in terms of both performance and, crucially, robustness. 
+              While standard offline RL struggles to avoid constraint violations that are not present in the dataset, OHIO addresses this by directly encoding domain-specific constraints. As a result, OHIO inherently avoids infeasible out-of-distribution states, facilitating more robust deployment and safer online fine-tuning.
+            </p>
+            </div>
+            
+                        <!-- Flexbox for the two FT images side by side -->
+            <div class="content has-text-centered" style="display: flex; justify-content: space-around; align-items: center;">
+
+              <!-- First FT Image -->
+              <div style="flex: 1; text-align: center;">
+                <img src="./figures/FT-Spolicy-OHIO.png" height="500px" width="500px" alt="FT Spolicy OHIO"/>
+                <figcaption style="text-align:center;">Online-finetuning on a supply chain scenario</figcaption>
+              </div>
+
+              <!-- Second FT Image -->
+              <div style="flex: 1; text-align: center;">
+                <img src="./figures/FT_NYC_G.png" height="500px" width="500px" alt="FT NYC G"/>
+                <figcaption style="text-align:center;">Online-finetuning on a vehicle routing scenario</figcaption>
+            </div>
+        </div>
+        </div>    
+    </div>
+    </section>
+
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@article{ohio2024,
+    author    = {},
+    journal   = {},
+    title     = {},
+    year      = {2024},
+    }</code></pre>
+    </div>
+    </section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="columns is-centered">
+        <div class="column">
+            <div class="content has-text-centered">
+            <p>
+                Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>. 
+            </p>
+            </div>
+        </div>
+        </div>
+    </div>
+    </footer>
+    
+    </body>
+    </html>
