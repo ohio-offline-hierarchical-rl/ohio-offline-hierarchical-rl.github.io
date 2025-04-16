@@ -160,6 +160,37 @@
     </div>
     <!--/ Abstract. -->
 
+    <section class="section">
+      <div class="container content">
+        <h2 class="title is-4 has-text-link has-text-centered">Motivation</h2>
+    
+        <p>
+          <strong>Hierarchical policies</strong> perform control at different levels of abstraction, providing benefits such as:
+        </p>
+    
+        <ul style="list-style: none; padding-left: 0;">
+          <li><span class="has-text-link">✔️</span> Improving <strong>long-term planning</strong></li>
+          <li><span class="has-text-link">✔️</span> Enabling <strong>convenient state representations</strong></li>
+          <li><span class="has-text-link">✔️</span> Combining <strong>learning- and optimization-based control</strong></li>
+        </ul>
+    
+        <p>
+          Previous work often relies on <strong>costly online interaction</strong>, as
+          <strong>offline learning</strong> within hierarchical formulations is limited by:
+        </p>
+    
+        <ul>
+          <li><span class="has-text-link">🔵 Challenge 1:</span> High-level action <code>û</code> may not be observable</li>
+          <li><span class="has-text-link">🔵 Challenge 2:</span> Any modifications to the controller can yield ill-posed offline RL problems</li>
+        </ul>
+    
+        <figure class="has-text-centered">
+          <img src="figures/fig1_new.png" alt="OHIO diagram" style="max-width: 1000px; width: 100%; height: auto;" />
+          <figcaption class="is-size-6 mt-2">High-level vs. low-level data mismatch in hierarchical offline RL.</figcaption>
+        </figure>
+      </div>
+  </section>
+
 
 <section class="section">
   <div class="container is-max-desktop">
