@@ -281,21 +281,26 @@
             </div>
             
                         <!-- Flexbox for the two FT images side by side -->
-            <div class="content has-text-centered" style="display: flex; justify-content: space-around; align-items: center;">
+            <!-- Combined figure with caption for FT images -->
+        <figure style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap;">
 
-              <!-- First FT Image -->
-              <div style="flex: 1; text-align: center;">
-                <img src="./figures/FT-Spolicy-OHIO_new.png" height="500px" width="500px" alt="FT Spolicy OHIO"/>
-              </div>
+          <!-- First FT Image -->
+          <div style="flex: 1; text-align: center;">
+            <img src="./figures/FT-Spolicy-OHIO_new.png" height="500px" width="500px" alt="FT Spolicy OHIO"/>
+          </div>
 
-              <!-- Second FT Image -->
-              <div style="flex: 1; text-align: center;">
-                <img src="./figures/FT-MPC-OHIO_new.png" height="500px" width="500px" alt="FT NYC G"/>
-            </div>
-            <figcaption style="text-align:center;">
-              Online fine-tuning performance of End-To-End vs. OHIO (Left) and constraint violations during online fine-tuning (Right) on a supply chain management scenario. 
-            </figcaption>
-        </div>
+          <!-- Second FT Image -->
+          <div style="flex: 1; text-align: center;">
+            <img src="./figures/FT-MPC-OHIO_new.png" height="500px" width="500px" alt="FT NYC G"/>
+          </div>
+
+          <!-- Combined caption -->
+          <figcaption style="text-align:center; margin-top: 1rem;">
+            Online fine-tuning performance of End-to-End vs. OHIO (left), and constraint violations during fine-tuning (right) in a supply chain scenario.
+          </figcaption>
+
+        </figure>
+
         </div>    
     </div>
     </section>
