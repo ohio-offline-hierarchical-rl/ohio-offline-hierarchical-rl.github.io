@@ -227,7 +227,6 @@
           </div>
           <div class="content has-text-justified">
             <p>
-              Given offline trajectory tuples {(s, r, s')}, we recover high-level actions &ucirc; by solving an inverse problem. 
               If no analytic form exists, we solve numerically using:
             </p>
             <ul>
@@ -285,14 +284,15 @@
               <!-- First FT Image -->
               <div style="flex: 1; text-align: center;">
                 <img src="./figures/FT-Spolicy-OHIO_new.png" height="500px" width="500px" alt="FT Spolicy OHIO"/>
-                <figcaption style="text-align:center;">Online-finetuning on a supply chain scenario</figcaption>
               </div>
 
               <!-- Second FT Image -->
               <div style="flex: 1; text-align: center;">
                 <img src="./figures/FT-MPC-OHIO_new.png" height="500px" width="500px" alt="FT NYC G"/>
-                <figcaption style="text-align:center;">Online-finetuning on a vehicle routing scenario</figcaption>
             </div>
+            <figcaption style="text-align:center;">
+              Online fine-tuning performance of End-To-End vs. OHIO (Left) and constraint violations during online fine-tuning (Right) on a supply chain management scenario. 
+            </figcaption>
         </div>
         </div>    
     </div>
